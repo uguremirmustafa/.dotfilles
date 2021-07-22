@@ -182,8 +182,8 @@ bindsym Mod1+Shift+Tab workspace prev
 bindsym $mod+Tab workspace back_and_forth
 
 #navigate workspaces next / previous
-bindsym Mod1+Ctrl+Right workspace next
-bindsym Mod1+Ctrl+Left workspace prev
+bindsym $mod+Next workspace next
+bindsym $mod+Prior workspace prev
 
 # switch to workspace with urgent window automatically
 for_window [urgent=latest] focus
@@ -260,7 +260,7 @@ assign [class="Nemo|Thunar|Caja|nautilus|Nautilus"]                            �
 # Workspace 5 Images and meld
 # assign [class="ristretto|Ristretto|shotwell|Shotwell|Xviewer|Nitrogen"]             → $workspace5
 # assign [class="feh|gthumb|Gthumb|eog|Eog|Pinta|pixeluvo|Pixeluvo"]                  → $workspace5
-assign [class="KeePassXC"]                                                               → $workspace5
+assign [class="KeePassXC|Simplenote"]                                                               → $workspace5
 
 
 # Workspace 6 all video related software
@@ -320,14 +320,14 @@ exec --no-startup-id nm-applet
 exec_always --no-startup-id numlockx on
 
 # dropbox
-exec --no-startup-id dropbox start
+# exec --no-startup-id dropbox start
 
 # insync
 #exec --no-startup-id insync start
 
 # volume
-#exec --no-startup-id pasystray
-exec --no-startup-id volumeicon
+# exec --no-startup-id pasystray
+# exec --no-startup-id volumeicon
 
 # clipman
 # exec --no-startup-id xfce4-clipman
@@ -348,7 +348,7 @@ exec_always --no-startup-id /usr/bin/dunst -conf "~/.config/dunst/dunstrc" &
 #################                                 system applications                               #################
 #####################################################################################################################
 
-exec --no-startup-id xfce4-power-manager &
+# exec --no-startup-id xfce4-power-manager &
 # ommitted next line to get super key to bring up the menu in xfce and avoid error then in i3
 # IF xfsettingsd is activated you can not change themes
 #exec --no-startup-id xfsettingsd &
@@ -602,7 +602,7 @@ bindsym XF86MonBrightnessDown exec --no-startup-id xbacklight -dec 20 # decrease
 
 
 # bar toggle, hide or show
-bindsym $mod+b bar mode toggle
+# bindsym $mod+b bar mode toggle
 
 
 #####################################################################################################################

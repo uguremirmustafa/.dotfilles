@@ -15,6 +15,8 @@ URxvt.keysym.Shift-Control-V: eval:paste_clipboard
 URxvt.keysym.Shift-Control-C: eval:selection_to_clipboard
 URxvt.iso14755: false
 URxvt.iso14755_52: false
+URxvt.transparent:   true
+URxvt.shading:       20
 
 ! Adding inner padding to the terminal between border and text
 URxvt.internalBorder:  60
